@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>스트레스 · 불안 성향 검사</title>
+<link rel="stylesheet" href="style.css" />
+  <style>
+    .question {
+      margin-bottom: 1.5rem;
+    }
+    .options label {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ 첫 화면 -->
+  <div id="start-screen" style="text-align: center; margin-top: 100px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNHB83ekMZBll7wuJDimXCEiI6fpt6w1W1HQ&s"
+         alt="테스트 이미지" style="max-width: 300px; border-radius: 20px;" />
+    <h1>스트레스 · 불안 성향 검사</h1>
+    <button id="start-btn" style="font-size: 1.2rem; padding: 10px 20px; margin-top: 20px;">검사 시작하기</button>
+  </div>
+
+  <!-- ✅ 설문 폼: 시작 전에는 숨김 -->
+  <form id="testForm" style="display: none; padding: 20px;">
+
+<h1>스트레스 · 불안 성향 검사</h1>
+<form id="testForm">
+
+  <div class="question" data-group="R">
+    <p>1. 친구들이 나를 싫어할까봐 신경이 쓰인다.</p>
+    <div class="options" data-name="q1"></div>
+  </div>
+  <div class="question" data-group="I">
+    <p>2. 화나는 일이 있어도 주로 나 자신을 탓한다.</p>
+    <div class="options" data-name="q2"></div>
+  </div>
+  <div class="question" data-group="S">
+    <p>3. 스트레스를 받으면 소화가 잘 안된다.</p>
+    <div class="options" data-name="q3"></div>
+  </div>
+  <div class="question" data-group="H">
+    <p>4. 심장이 빨리 뛰면 큰일 나는 건 아닐까 싶다.</p>
+    <div class="options" data-name="q4"></div>
+  </div>
+  <div class="question" data-group="F">
+    <p>5. 발표나 수행평가를 하기 전에는 내가잘하지 못할까 봐 무섭다. </p>
+    <div class="options" data-name="q5"></div>
+  </div>
+  <div class="question" data-group="E">
+    <p>6. 짜증이 쉽게 나고 말 또는 행동으로 표현한다.</p>
+    <div class="options" data-name="q6"></div>
+  </div>
+  <div class="question" data-group="P">
+    <p>7. 내가 준비해도 결과가 안 좋을까 봐 불안하다.</p>
+    <div class="options" data-name="q7"></div>
+  </div>
+  <div class="question" data-group="C">
+    <p>8. 스트레스가 스트레스의 원인이 되는 일이 해결되어도 지속된다.</p>
+    <div class="options" data-name="q8"></div>
+  </div>
+  <div class="question" data-group="F">
+    <p>9. 완벽하게 해내지 못하면 스스로에게 실망한다.</p>
+    <div class="options" data-name="q19"></div>
+  </div>
+  <div class="question" data-group="R">
+    <p>10. 친구들에게 거절당할까 봐 말 꺼내는 게 망설여진다.</p>
+    <div class="options" data-name="q10"></div>
+  </div>
+  <div class="question" data-group="S">
+    <p>11. 예민한 일이 있으면 편두통이 심하다.</p>
+    <div class="options" data-name="q11"></div>
+  </div>
+  <div class="question" data-group="I">
+    <p>12. 감정이 힘들어도 겉으로 드러내지 않는다.</p>
+    <div class="options" data-name="q12"></div>
+  </div>
+  <div class="question" data-group="P">
+    <p>13. 아직 일어나지 않은 일에 대해 걱정이 많다.</p>
+    <div class="options" data-name="q13"></div>
+  </div>
+  <div class="question" data-group="A">
+    <p>14. 스트레스의 원인이 해소되면 스트레스 또한 사라진다.</p>
+    <div class="options" data-name="q14"></div>
+  </div>
+  <div class="question" data-group="E">
+    <p>15. 스트레스를 받으면 주변 사람에게 예민해진다.</p>
+    <div class="options" data-name="q15"></div>
+  </div>
+  <div class="question" data-group="C">
+    <p>16. 일이 끝나도 스트레스를 계속 느낀다.</p>
+    <div class="options" data-name="q16"></div>
+  </div>
+  <div class="question" data-group="R">
+    <p>17. 다른 사람의 말이나 표정이 나에 대한 것 같아 걱정된다.</p>
+    <div class="options" data-name="q17"></div>
+  </div>
+  <div class="question" data-group="S">
+    <p>18. 일이 부담이 되거나 스트레스를 받는 상황이 오면 속이 쓰리다.</p>
+    <div class="options" data-name="q18"></div>
+  </div>
+ <div class="question" data-group="F">
+    <p>19. 다른 사람과 스스로를 비교하며 타인의 평가를 두려워한다.</p>
+    <div class="options" data-name="q19"></div>
+  </div>
+  <div class="question" data-group="A">
+    <p>20. 일이 끝나면 그 일에 대해서는 스트레스를 느끼지 않는다.</p>
+    <div class="options" data-name="q20"></div>
+  </div>
+  <div class="question" data-group="P">
+    <p>21. 미래에 대한 생각을 하면 긴장되거나 겁이 난다.</p>
+    <div class="options" data-name="q21"></div>
+  </div>
+  <div class="question" data-group="R">
+    <p>22. 단체에서 내가 튀거나 이상해 보일까봐 걱정된다.</p>
+    <div class="options" data-name="q22"></div>
+  </div>
+  <div class="question" data-group="I">
+    <p>23. 실수를 하면 스스로를 오래 자책한다.</p>
+    <div class="options" data-name="q23"></div>
+  </div>
+  <div class="question" data-group="S">
+    <p>24. 스트레스를 받으면 몸이 자주 아프다.</p>
+    <div class="options" data-name="q24"></div>
+  </div>
+  <div class="question" data-group="P">
+    <p>25. 계획이 틀어질까 봐 불안해서 미리 대비하려 한다.</p>
+    <div class="options" data-name="q25"></div>
+  </div>
+  <div class="question" data-group="C">
+    <p>26. 1달 중 거의 대부분을 스트레스를 받는다.</p>
+    <div class="options" data-name="q26"></div>
+  </div>
+  <div class="question" data-group="A">
+    <p>27. 스트레스는 가끔느끼는 편이다.</p>
+    <div class="options" data-name="q27"></div>
+  </div>
+  <div class="question" data-group="H">
+    <p>28. 주변 사람이 아프면 나도 아픈 것 같은 기분이 든다.</p>
+    <div class="options" data-name="q28"></div>
+  </div>
+  <div class="question" data-group="H">
+    <p>29. 자주 아픈 편이고, 그게 불안하게 느껴진다.</p>
+    <div class="options" data-name="q29"></div>
+  </div>
+  <div class="question" data-group="F">
+    <p>30. 성적이 좋지 않으면 나는 실패한 사람이라고 느낀다.</p>
+    <div class="options" data-name="q30"></div>
+  </div>
+  <div class="question" data-group="E">
+    <p>31. 감정을 바로바로 표현하지 않으면 더 힘들다.</p>
+    <div class="options" data-name="q31"></div>
+  </div>
+  <div class="question" data-group="I">
+    <p>32. 내가 부족하다는 생각이 자주 든다.</p>
+    <div class="options" data-name="q32"></div>
+  </div>
+  <div class="question" data-group="H">
+    <p>33. 건강 관련 뉴스나 글을 보면 불안해진다.</p>
+    <div class="options" data-name="q33"></div>
+  </div>
+  <div class="question" data-group="I">
+    <p>34. 스트레스를 받으면 말수가 줄어든다.</p>
+    <div class="options" data-name="q34"></div>
+  </div>
+  <div class="question" data-group="E">
+    <p>35. 공부나 과제가 많으면 화가 치밀어 오른다.</p>
+    <div class="options" data-name="q35"></div>
+  </div>
+  <div class="question" data-group="F">
+    <p>36. 부모님이나 선생님의 평가가 중요하게 느껴진다.</p>
+    <div class="options" data-name="q36"></div>
+  </div>
+  <div class="question" data-group="E">
+    <p>37. 스트레스를 받으면 폭발하듯 화를 내는 편이다.</p>
+    <div class="options" data-name="q37"></div>
+  </div>
+  <div class="question" data-group="R">
+    <p>38. 다른 사람의 눈치를 자주 본다.</p>
+    <div class="options" data-name="q38"></div>
+  </div>
+ <div class="question" data-group="S">
+    <p>39. 마음이 불안하거나 답답하면 숨이 막히는 느낌이 든다.</p>
+    <div class="options" data-name="q39"></div>
+  </div>
+<div class="question" data-group="H">
+    <p>40. 몸이 조금만 이상해도 병에 걸렸나 걱정한다.</p>
+    <div class="options" data-name="q40"></div>
+  </div>
+<div class="question" data-group="P">
+    <p>41. 다가올 일이 불확실하면 걱정이 된다.</p>
+    <div class="options" data-name="q41"></div>
+  </div>
+
+
+
+
+
+  <button type="submit">결과 보기</button>
+</form>
+
+<div id="result" class="result"></div>
+<div id="explanation" class="explanation"></div>
+<div id="link-section" style="display: none; text-align: center; margin-top: 2rem;">
+  <p>검사후 링크를 클릭해 설문을 진행해 주세요! 👇</p>
+  <a id="result-link" href="#" target="_blank" style="font-size: 1.1rem; color: blue; text-decoration: underline;">
+    검사 후 설문지
+  </a>
+</div>
+ 
+ 
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="script.js"></script>
+</body>
+</html>
